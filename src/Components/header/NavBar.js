@@ -1,10 +1,6 @@
 import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
-import {
-    Link
-} from 'react-router-dom';
-
-import './NavBar.css';
+import NavLink from './NavLink';
 
 const { SubMenu } = Menu;
 const { Sider } = Layout;
@@ -18,27 +14,40 @@ const NavBar = () => (
         >
             <SubMenu
                 title={
-                    <Link
+                    <NavLink
                         to="/"
                     >
                         <Icon type="home" />
                         <span>
                             Index
                         </span>
-                    </Link>
+                    </NavLink>
                 }
             >
             </SubMenu>
             <SubMenu
                 title={
-                    <Link
+                    <NavLink
                         to="/DatePicker"
                     >
                         <Icon type="calendar" />
                         <span>
                             DatePicker
                         </span>
-                    </Link>
+                    </NavLink>
+                }
+            >
+            </SubMenu>
+            <SubMenu
+                title={
+                    <NavLink
+                        to="/Calendar"
+                    >
+                        <Icon type="calendar" />
+                        <span>
+                            CalendarPage
+                        </span>
+                    </NavLink>
                 }
             >
             </SubMenu>

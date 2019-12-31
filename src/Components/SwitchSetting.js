@@ -12,6 +12,7 @@ import {
 import NavBar from './header/NavBar';
 import Index from '../pages/Index';
 import DatepickPage from '../pages/DatepickPage';
+import CalendarPage from '../pages/CalendarPage';
 
 const { Content } = Layout;
 
@@ -27,6 +28,7 @@ const SwitchSetting = () => {
                     <Switch>
                         <Route exact path="/" component={Index} />
                         <Route exact path="/DatePicker" component={DatepickPage} />
+                        <Route exact path="/Calendar" component={CalendarPage} />
                     </Switch>
                 </Content>
             </Layout>
