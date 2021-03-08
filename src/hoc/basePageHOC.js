@@ -1,27 +1,29 @@
-import React, { Fragment, Component } from 'react';
+import React from 'react';
 import {
     Layout
 } from 'antd';
 
-const { Header, Footer } = Layout;
+const { Header, Footer, Content } = Layout;
 
 const basePageHOC = (PageComponent) => {
 
-    class Wrap extends Component {
+    const Wrap = () => {
 
-        render () {
-
-            return (
-                <Fragment>
-                    <Header/>
+        return (
+            <Layout>
+                <Header/>
+                <Content
+                    style={{
+                        padding: 16
+                    }}
+                >
                     <PageComponent/>
-                    <Footer>
-                        This is Footer
-                    </Footer>
-                </Fragment>
-            );
-
-        }
+                </Content>
+                <Footer>
+                    This is Footer
+                </Footer>
+            </Layout>
+        );
 
     }
 

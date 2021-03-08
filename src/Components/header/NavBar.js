@@ -51,6 +51,19 @@ const NavBar = () => (
                 }
             >
             </SubMenu>
+            <SubMenu
+                title={
+                    <NavLink
+                        to="/Table"
+                    >
+                        <Icon type="database" />
+                        <span>
+                            TablePage
+                        </span>
+                    </NavLink>
+                }
+            >
+            </SubMenu>
         </Menu>
     </Sider>
 );
